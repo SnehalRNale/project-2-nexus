@@ -11,7 +11,7 @@ mongoose.connect("mongodb://localhost:27017/techySoftware")
 })
 
 
-//creating a schema to store the inputs from user
+
 const feedbackSchema = new mongoose.Schema({
     name:{
         type: String,
@@ -51,11 +51,11 @@ const contactUsSchema = new mongoose.Schema({
     }
 })
 
-// Model for the feedback collection
+
 
 const collection = new mongoose.model("FeedbackForm",feedbackSchema)
 
-// Model for the contact us collection
+
 const ContactUs = mongoose.model("ContactUsForm", contactUsSchema)
 
 module.exports = { collection, ContactUs }
